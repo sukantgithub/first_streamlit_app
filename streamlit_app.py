@@ -34,7 +34,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 
 # write your own comment -what does the next line do? : panda bring json format data to normalised tabular format
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do? : datafram to streamlit with data
+# write your own comment - what does this do? : datafram to streamlit with data?")
 streamlit.dataframe(fruityvice_normalized)
 
 streamlit.stop()
