@@ -44,11 +44,10 @@ my_cur.execute("SELECT * from FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains: ")
 streamlit.dataframe(my_data_rows)
-def insert_row_snowflake(newfruit = 'Jackfruit'):
-#def insert_row_snowflake(new_fruit):
+def insert_row_snowflake(newfruit):
   with my_cnx.cursor() as my_cur:
-    #my_cur.execute("insert into fruit_load_list values ('from streamlit')")
-    my_cur.execute("insert into fruit_load_list values (new_fruit)")
+    my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+    #my_cur.execute("insert into fruit_load_list values (new_fruit)")
     return "Thanks for adding! " + new_fruit
 add_my_fruit = streamlit.text_input('what fruit would you like add?')
 if streamlit.button('Add a fruit to the list') :
